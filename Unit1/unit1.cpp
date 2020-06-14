@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 // unit1.cpp
 //
-// Copyright (c) 2020 glensand
+// Copyright (c) 2020 ya_sayanb
 // All rights reserved.
 //
 // Date: 14.06.2020
