@@ -1,4 +1,9 @@
 https://code.visualstudio.com/docs/cpp/config-msvc
 
+Запустить  "VsDevCmd.bat"
+Перейти в рабочую папку
+Выполнить "code ."
+
 В терминале:
 Ctrl+Shift+B - Собрать открытый файл.
+Открыв снова терминал, выполнить .\UnitX\unitX.cpp
