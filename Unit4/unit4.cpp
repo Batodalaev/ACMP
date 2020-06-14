@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 #include <iostream>
 
-// 
+// https://acmp.ru/index.asp?main=task&id_task=4
 int main(){
     //0. Объявление переменных
     int_least16_t K, Result;
