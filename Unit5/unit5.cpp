@@ -22,6 +22,9 @@ int main(){
     int_least8_t Result;
     std::vector<uint_least16_t> DynamicArray;
 
+    //Лямбда-выражение проверки на четность
+    auto IsEven = [](auto number){return number % 2 == 0;};
+     
     //1. Ввод
     std::cin >> N;
 
@@ -32,19 +35,19 @@ int main(){
     //2. Обработка
     Result = 0;
     for(size_t i = 0 ; i < N ; i++)
-        Result += ((DynamicArray[i] % 2 == 0) ? 1 : -1);
+        Result += IsEven(DynamicArray[i]) ? 1 : -1;
 
     //3. Вывод
 
     //Пишем все нечетные даты в порядке ввода
     for(size_t i = 0 ; i < N ; i++)
-        if(DynamicArray[i] % 2 == 1)
+        if(!IsEven(DynamicArray[i]))
             std::cout << DynamicArray[i] << ' ';
     std::cout << std::endl;
 
     //Пишем все четные даты в порядке ввода
     for(size_t i = 0 ; i < N ; i++)
-        if(DynamicArray[i] % 2 == 0)
+        if(IsEven(DynamicArray[i]))
             std::cout << DynamicArray[i] << ' ';
     std::cout << std::endl;
 
