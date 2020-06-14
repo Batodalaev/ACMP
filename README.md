@@ -10,6 +10,7 @@
 В комментариях могу приложить полезные ссылки на документацию или справочники.<br>
 
 Обо мне:<br>
+* Первый сайт, где я решал задачи: https://informatics.mccme.ru/
 * Я на ACMP: https://acmp.ru/?main=user&id=99325
 * Я на Github https://github.com/Batodalaev
 
