@@ -11,7 +11,7 @@
 
 // https://acmp.ru/index.asp?main=task&id_task=4
 int main(){
-    //0. Объявление переменных
+    //0. Объявление констант и переменных
     int_least16_t K, Result;
 
     //1. Ввод

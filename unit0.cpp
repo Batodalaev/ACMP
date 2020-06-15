@@ -12,7 +12,7 @@
 // https://acmp.ru/index.asp?main=task&id_task=0 //TODO
 // Пустой шаблон//TODO
 int main(){
-    //0. Объявление переменных
+    //0. Объявление констант и переменных
     //TODO
 
     //1. Ввод
