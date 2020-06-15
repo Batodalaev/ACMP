@@ -13,7 +13,7 @@
 // https://acmp.ru/index.asp?main=task&id_task=5
 // 
 int main(){
-    //0. Объявление переменных
+    //0. Объявление констант и переменных
     const std::string Yes = "YES";
     const std::string No = "NO";
 
