@@ -1,7 +1,6 @@
-https://code.visualstudio.com/docs/cpp/config-msvc
+﻿https://code.visualstudio.com/docs/cpp/config-msvc
 
-Запустить  "VsDevCmd.bat"
-Перейти в рабочую папку
+Запустить  "VsDevCmd 201X.bat"
 Выполнить "code ."
 
 В терминале:
