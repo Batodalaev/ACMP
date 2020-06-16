@@ -9,6 +9,8 @@
 //------------------------------------------------------------------------------
 #include <iostream>
 #include <vector>
+#include <numeric>
+#include <algorithm>
 
 // https://acmp.ru/index.asp?main=task&id_task=9
 //
@@ -31,14 +33,30 @@ int main(){
     //2. Обработка
     
     //Нахождение суммы всех положительных чисел
-    //std::accumulate sum only positive
+    auto SumIfPositive = [](auto sum, auto add)
+    {
+        return add > 0 ? sum + add : sum;
+    };
+    ResultSum = std::accumulate(Numbers.begin(), Numbers.end(), Numbers[0], SumIfPositive);
 
     //Нахождение позиций наибольшего и наименьшего числа
-    //std::min_element
-    //std::max_element
+    auto minElement = std::min_element(Numbers.begin(), Numbers.end());
+    auto maxElement = std::max_element(Numbers.begin(), Numbers.end());
+    
+    std::cout << "Debug " << *minElement << ' ' << *maxElement << std::endl;
+
+    //TODO учесть что они могут не быть соседними, или массив пустой. для текущей задачи не требуется.
+    auto lowBounds = std::min(minElement, maxElement) + 1;
+    auto highBounds = std::max(minElement, maxElement);
+
+    std::cout << "Debug " << *lowBounds << ' ' << *highBounds << std::endl;
 
     //Нахождение произведения всех элементов между найденными позициями
-    //std::accumulate multiply
+    auto Multiply = [](auto mult, auto add)
+    {
+        return mult * add;
+    };
+    ResultMultiply = std::accumulate(lowBounds, highBounds, *lowBounds, Multiply);
 
     //3. Вывод
     std::cout << ResultSum << ' ' << ResultMultiply;
