@@ -37,26 +37,26 @@ int main(){
     {
         return add > 0 ? sum + add : sum;
     };
-    ResultSum = std::accumulate(Numbers.begin(), Numbers.end(), Numbers[0], SumIfPositive);
+    ResultSum = std::accumulate(Numbers.begin(), Numbers.end(), 0, SumIfPositive);
 
     //Нахождение позиций наибольшего и наименьшего числа
     auto minElement = std::min_element(Numbers.begin(), Numbers.end());
     auto maxElement = std::max_element(Numbers.begin(), Numbers.end());
     
-    std::cout << "Debug " << *minElement << ' ' << *maxElement << std::endl;
+    //std::cout << "Debug " << *minElement << ' ' << *maxElement << std::endl;
 
     //TODO учесть что они могут не быть соседними, или массив пустой. для текущей задачи не требуется.
-    auto lowBounds = std::min(minElement, maxElement) + 1;
+    auto lowBounds = std::next(std::min(minElement, maxElement));
     auto highBounds = std::max(minElement, maxElement);
 
-    std::cout << "Debug " << *lowBounds << ' ' << *highBounds << std::endl;
+    //std::cout << "Debug " << *lowBounds << ' ' << *highBounds << std::endl;
 
     //Нахождение произведения всех элементов между найденными позициями
     auto Multiply = [](auto mult, auto add)
     {
         return mult * add;
     };
-    ResultMultiply = std::accumulate(lowBounds, highBounds, *lowBounds, Multiply);
+    ResultMultiply = std::accumulate(std::next(lowBounds), highBounds, *lowBounds, Multiply);
 
     //3. Вывод
     std::cout << ResultSum << ' ' << ResultMultiply;
